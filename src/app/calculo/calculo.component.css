@@ -1,15 +1,76 @@
-table{
-    background-color: rgb(255, 255, 255);
-    width: 300px;
-    height: 310px;
-    border-style: calc(1);
-    border: 1px solid rgb(105, 8, 8);
-    container: 10;
-    padding:  10px;
-    top: 50%;
-    left: 50%;
-    position:  fixed;
-    transform: translate(-50%, -50%);
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* Cor de fundo escuro */
+  font-family: Arial, sans-serif; /* Fonte */
+}
 
-  
-  }
+.calculator {
+  width: 450px; /* Largura da calculadora */
+  background-color: #333; /* Cor de fundo */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa a borda */
+}
+
+.screen {
+  padding: 20px;
+  background-color: #222; /* Cor de fundo da tela */
+  border-bottom: 1px solid #444; /* Linha separadora */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.form-control {
+  border: none; /* Remove a borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 15px; /* Espaçamento interno */
+  font-size: 1.2em; /* Tamanho da fonte */
+  width: calc(100% - 30px); /* Largura do campo de entrada */
+  background-color: #444; /* Cor de fundo do campo de entrada */
+  color: #fff; /* Cor do texto do campo de entrada */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end; /* Centraliza os botões na parte direita */
+  margin-right: 15px; /* Adiciona margem à direita */
+}
+
+.btn {
+  border: none; /* Remove a borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 15px 20px; /* Espaçamento interno */
+  font-size: 1.2em; /* Tamanho da fonte */
+  margin: 0 5px; /* Margem */
+  background-color: #555; /* Cor de fundo dos botões */
+  color: #fff; /* Cor do texto */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+.btn:hover {
+  background-color: #777; /* Cor de fundo ao passar o mouse */
+}
+
+.btn:focus {
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.btn:active {
+  transform: translateY(2px); /* Efeito de pressionar */
+}
+
+/* Centralizar botões de operação */
+.operation-btns {
+  justify-content: space-between;
+  width: 320px;
+}

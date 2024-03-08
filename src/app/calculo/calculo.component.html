@@ -1,23 +1,65 @@
-<table>
-    <tr>
-  <td>PrimeiroNumero</td>
-  <td><input type="number" [(ngModel)]="num1" name= "num1"></td>
-  
-    </tr>
-    <tr>
-      <td>SegundoNumero</td>
-      <td><input type="number" [(ngModel)]="num2" name= "num2" ></td>
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1b2836;
+      color: white;
+    }
+
+    .calculator-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .twitter-bird {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 20px 30px;
+      font-size: 18px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator-container">
+      <img src="https://vincent-yao27.github.io/ph-icon-gen/git.png" alt="Twitter Bird" class="twitter-bird">
+      <h2>Calculator</h2>
+      <table class="table table-dark">
+        <tr>
+          <td>Primeiro número</td>
+          <td><input type="number" [(ngModel)]="num1" name="num1" class="form-control"></td>
+        </tr>
+        <tr>
+          <td>Segundo número</td>
+          <td><input type="number" [(ngModel)]="num2" name="num2" class="form-control"></td>
         </tr>
         <tr>
           <td></td>
-          <button (click) = "calc('soma')">Soma</button>
-            <button (click) = "calc('sub')">Subtração</button>
-              <button (click) = "calc('mul')">Multiplicação</button>
-                <button (click) = "calc('div')">Divisão</button>
-  
-  
-            <td>Resultado= {{resultado}}</td>
-            <td></td>
-            </tr>
-  </table>
+          <td>
+            <button class="btn btn-primary" (click)="calc('soma')">Somar</button>
+            <button class="btn btn-primary" (click)="calc('sub')">Subtração</button>
+            <button class="btn btn-primary" (click)="calc('mul')">Multiplicação</button>
+            <button class="btn btn-primary" (click)="calc('div')">Divisão</button>
+            <button class="btn btn-primary" (click)="calc('raiz')">Raiz Quadrada</button>
+            <button class="btn btn-primary" (click)="calc('por')">Porcentagem</button>
+          </td>
+          <td>Resultado: {{resultado}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
